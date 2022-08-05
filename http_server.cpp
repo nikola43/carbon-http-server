@@ -18,6 +18,9 @@
 char httpHeader[8000] = "HTTP/1.1 200 OK\r\n\n";
 
 HttpServer::HttpServer() {  // Constructor
+}
+
+void HttpServer::run() {
   // Socket setup: creates an endpoint for communication, returns a descriptor
   // -----------------------------------------------------------------------------------------------------------------
   int serverSocket =
@@ -54,9 +57,7 @@ HttpServer::HttpServer() {  // Constructor
   }
   report(&serverAddress);     // Custom report function
   setHttpHeader(httpHeader);  // Custom function to set header
-}
 
-void HttpServer::run() {
   // Wait for a connection, create a connected socket if a connection is
   // pending
   // -----------------------------------------------------------------------------------------------------------------
