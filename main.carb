@@ -10,10 +10,18 @@
 // CHECK: Hello world!
 // CHECK: result: 0
 
-package ExplorerTest api;
+package Main api;
+
+
+class LoginRequest {
+  var username : String;
+  var password : String;
+}
 
 fn Main() -> i32 {
-  var s: auto = "Hello world!";
-  Print(s);
+  var loginRequest: LoginRequest = {.username = "the", .password = "sss",};
+
+  Print(loginRequest.username);
+  Print(loginRequest.password);
   return 0;
 }
