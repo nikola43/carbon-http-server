@@ -11,20 +11,12 @@
 // CHECK: result: 0
 
 package Main api;
-import Server library "http_server.h";
-
-class LoginRequest {
-  var username : String;
-  var password : String;
-}
+import CppHttpServer library "http/http_server.h";
 
 fn Main() -> i32 {
-  var loginRequest: LoginRequest = {.username = "the", .password = "sss",};
+  Print("Init");
 
-  Print(loginRequest.username);
-  Print(loginRequest.password);
-
-  var httpServer: Server.HttpServer;
+  var httpServer: CppHttpServer.HttpServer;
   //httpServer.run();
 
   return 0;

@@ -11,7 +11,7 @@
 // CHECK: result: 0
 
 package Main api;
-import HttpServer library "http_server.h";
+import Cpp library "http_server.h";
 
 class LoginRequest {
   var username : String;
@@ -24,7 +24,7 @@ fn Main() -> i32 {
   Print(loginRequest.username);
   Print(loginRequest.password);
 
-  var httpServer: HttpServer;
+var httpServer: HttpServer;
   //httpServer.run();
 
   return 0;

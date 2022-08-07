@@ -1,5 +1,5 @@
 #!/bin/bash
-g++ -c http_server.cpp -o HttpServer.o
+g++ -c http/http_server.cpp -o http/HttpServer.o
 g++ -c main.cpp -o main.o
-g++ HttpServer.o main.o -o main
+g++ http/HttpServer.o main.o -o main
 ./main
